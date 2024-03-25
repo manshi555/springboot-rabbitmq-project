@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "afa3c823-7df9-4125-9e5e-9ab51c8555bd",
+		"name": "rabbitMQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "publish",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/publish?message=demo message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"publish"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "demo message"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json publish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"123\",\r\n    \"userName\" : \"ABC\",\r\n    \"designation\" : \"XYZ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/publish/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"publish",
+						"json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
